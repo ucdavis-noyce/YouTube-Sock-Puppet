@@ -9,12 +9,13 @@ To interact with YouTube, we developed our own selenium-based driver which can b
 For starters, you can just run `python docker-api.py --build --run --max-containers 5`. This will perform the following steps:
   1. Build the docker image.
   2. Load training and testing videos from the _data_ directory.
-  3. Create five sock puppets for the five ideology categories and assign them training and testing videos. These can be found in the _arguments_ directory which is created after the script is started.
+  3. Create five sock puppets for the five ideology categories and assign them training and testing videos. Once created, these sock puppet parameters can be found in the _arguments_ directory.
   4. Start docker containers for the five sock puppets. These sock puppets will run in parallel immediately and write their output to the _output/puppets_ directory once finished.
   
-There are two main files in this repository
-  - `docker-api.py`: Provides an API for running Docker commands and creating/running sock puppet containers. The script generates arguments 
-  - `sockpuppet.py`: The actual sock puppet implementation that runs inside each container. This is the actual sock puppet code that runs and collects YouTube data.
+
+There are two main files in this repository.
+  - `docker-api.py`: Provides an API for running Docker commands and creating/running sock puppet containers. The script generates arguments for the sock puppets as well.
+  - `sockpuppet.py`: The actual sock puppet implementation that runs inside each container. This is the code that runs for each individual sock puppet.
 
 ### docker-api.py
 Inside `docker-api.py`, you'll find some parameters and arguments. Here's an overview of what they do.
