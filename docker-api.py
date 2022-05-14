@@ -42,14 +42,6 @@ def build_image():
 def get_mount_volumes():
     # binds "/output" on the container -> "OUTPUT_DIR" actual folder on disk
     # binds "/args" on the container -> "ARGS_DIR" actual folder on disk
-
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
-
-    if not os.path.exists(ARGS_DIR):
-        os.makedirs(ARGS_DIR)
-
-    # mapping format for binding outputDir to /output
     return { OUTPUT_DIR: { "bind": "/output" }, ARGS_DIR: { "bind": "/args" } }
 
 def max_containers_reached(client, max_containers):
