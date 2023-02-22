@@ -70,3 +70,8 @@ The actions array is sorted by the order of the action performed. You can parse 
 ## Help with Docker
 - To verify that the containers are running successfully, run `docker container ls` to see running containers.
 - To view the logs for a particular container, run `docker container logs -f <container-id>` where `<container-id>` can be obtained from the `docker container ls` command.
+## Acknowledgements
+This tool was developed as part of an effort by researchers at UC Davis to audit the recommendations on YouTube. Read more about it [here](https://youtubeaudit.com).
+
+The primary maintainer is [Muhammad Haroon](https://github.com/haroon96).
+
